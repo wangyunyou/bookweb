@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>乐享智能借书柜</title>
+	<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<link href="css/mui.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="js/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css" />
+</head>
+
+<body>
+	<main>
+		<div class="searchBox">
+			<input class="searchInput" type="text" placeholder="书名/作者/出版社/ISBN编号"></input>
+			<div id="search">搜索</div>
+		</div>
+		<div class="imgBox">
+			<div class="swiper-container" id="swiperImg">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#">
+							<img class="swiperImage" src="img/banner_1.png">
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img class="swiperImage" src="img/banner_1.png">
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img class="swiperImage" src="img/banner_1.png">
+						</a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<div class="notice">
+			<div class="noticeTitle">
+				公告
+			</div>
+			<div class="swiper-container" id="swiperWords">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#">
+							<div class="noticeDetail">深情史深情史深情史深情史深情深情史深情史深情史深情史深情史</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<div class="noticeDetail">深情史深情史深情史深情史深情深情史深情史深情史深情史深情史</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<div class="noticeDetail">深情史深情史深情史深情史深情深情史深情史深情史深情史深情史</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="titleBox">
+				<div class="title">新书</div>
+				<div class="titleTip">查看全部 ></div>
+			</div>
+			<div class="bookBox">
+				<div class="bookThumbnail">
+					<image class="bookImg" src="img/bookBg.png"></image>
+					<div class="bookName">高等数学</div>
+					<div class="bookAuthor">刘丽朵[著]</div>
+				</div>
+				<div class="bookThumbnail">
+					<image class="bookImg" src="img/bookBg.png"></image>
+					<div class="bookName">高等数学</div>
+					<div class="bookAuthor">刘丽朵[著]</div>
+				</div>
+				<div class="bookThumbnail">
+					<image class="bookImg" src="img/bookBg.png"></image>
+					<div class="bookName">深情史深情史深情史深情史深情史</div>
+					<div class="bookAuthor">刘丽朵[著]</div>
+				</div>
+				<div class="bookThumbnail">
+					<image class="bookImg" src="img/bookBg.png"></image>
+					<div class="bookName">高等数学</div>
+					<div class="bookAuthor">刘丽朵[著]</div>
+				</div>
+				<div class="bookThumbnail">
+					<image class="bookImg" src="img/bookBg.png"></image>
+					<div class="bookName">深情史深情史深情史深情史深情史</div>
+					<div class="bookAuthor">刘丽朵[著]</div>
+				</div>
+				<div class="bookThumbnail">
+					<image class="bookImg" src="img/bookBg.png"></image>
+					<div class="bookName">深情史深情史深情史深情史深情史</div>
+					<div class="bookAuthor">刘丽朵[著]</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="foot-blank"></div>
+	</main>
+	<footer>
+		<ul class="foot">
+			<li>
+				<a href="#">
+					<div>
+						<img src="img/home_1.png">
+					</div>
+					<div class="active">
+						首页
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="classify.html">
+					<div>
+						<img src="img/class_2.png">
+					</div>
+					<div>
+						分类
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="bookshelf.html">
+					<div>
+						<img src="img/Shelves_2.png">
+					</div>
+					<div>
+						借书架
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="mine.html">
+					<div>
+						<img src="img/my_2.png">
+					</div>
+					<div>
+						我的
+					</div>
+				</a>
+			</li>
+		</ul>
+	</footer>
+	<script src="js/swiper/js/swiper.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+		$(function () {
+			var mySwiper = new Swiper('#swiperImg', {
+				loop: true,
+				autoplay: {
+					delay: 4000
+				}, //可选选项，自动滑动
+				pagination: {
+					el: '.swiper-pagination',
+				}
+			})
+			var mySwiper = new Swiper('#swiperWords', {
+				loop: true,
+				direction: 'vertical',
+				autoplay: {
+					delay: 1000
+				}, //可选选项，自动滑动
+			})
+		})
+	</script>
+</body>
+
+</html>
