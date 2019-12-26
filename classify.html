@@ -111,12 +111,15 @@
 	</footer>
 	<script type="text/javascript" charset="utf-8">
 		mui.init();
-
 		$(function () {
 			var liLength = $('.bookBox li').length
 			if (liLength % 3 == 2) {
 				$('.bookBox').append('<li class="bookThumbnail"></li>')
 			}
+
+			$('.classify li').click(function () {
+				$(this).addClass('active').siblings().removeClass('active')
+			})
 		})
 	</script>
 </body>

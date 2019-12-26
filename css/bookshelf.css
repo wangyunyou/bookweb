@@ -1,0 +1,190 @@
+.edit {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  padding: 0 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.changeMode {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #47d9c2;
+}
+
+.bigBookBox {
+  width: 100%;
+}
+
+.mui-input-row.mui-checkbox.mui-left {
+  width: 100%;
+  padding: 20px 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.mui-input-row.mui-checkbox.mui-left::after {
+  content: " ";
+  width: 100%;
+  height: 1px;
+  background: #eee;
+  position: absolute;
+  bottom: 0;
+  left: 42px;
+}
+
+.mui-input-row.mui-checkbox.mui-left.allCheck::after {
+  background: transparent;
+}
+
+.mui-radio input[type="radio"],
+.mui-checkbox input[type="checkbox"] {
+  top: auto;
+  width: 20px;
+  height: 20px;
+}
+
+.mui-input-row label {
+  padding: 0;
+}
+
+.mui-radio.mui-left input[type="radio"],
+.mui-checkbox.mui-left input[type="checkbox"] {
+  left: 15px;
+}
+
+.mui-radio.mui-left label,
+.mui-checkbox.mui-left label {
+  padding-right: 0;
+  padding-left: 30px;
+}
+
+.mui-radio input[type="radio"]:before,
+.mui-checkbox input[type="checkbox"]:before {
+  font-size: 20px;
+  color: #47d9c2;
+}
+
+.mui-radio input[type="radio"]:checked:before,
+.mui-checkbox input[type="checkbox"]:checked:before {
+  color: #47d9c2;
+}
+
+.mui-radio input[type="radio"][disabled]:before,
+.mui-checkbox input[type="checkbox"][disabled]:before {
+  color: #000;
+}
+
+.thumbnail {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bookImg {
+  width: 25%;
+}
+
+.bookDetailBox {
+  width: calc(75% - 10px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-left: 10px;
+}
+
+.bookDetailBox div {
+  color: #777;
+  font-size: 12px;
+  line-height: 21px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bookDetailBox div.stock {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #f00;
+}
+
+.bookDetailBox div.name {
+  color: #333;
+  font-size: 14px;
+  line-height: 33px;
+}
+
+.boxBlank {
+  width: 100%;
+  height: 60px;
+}
+
+.bottomBar {
+  width: 100%;
+  height: 60px;
+  border-top: 1px solid #f3f3f3;
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.lend {
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  background: #47d9c2;
+  text-align: center;
+  color: #fff;
+  float: right;
+  transition: 0.5s;
+}
+
+.lend.active {
+  background: #ff7272;
+}
+
+.mui-input-row.mui-checkbox.mui-left.allCheck {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.mui-input-row.mui-checkbox.mui-left.allCheck label {
+  font-size: 14px;
+  line-height: 21px;
+  padding-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bottomWords {
+  color: #777;
+}
+
+.checkOne {
+  width: 100%;
+  height: 100%;
+  padding: 0 15px 0 30px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

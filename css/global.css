@@ -89,6 +89,7 @@ footer {
 #search {
   width: 50px;
   height: 100%;
+  color: #444;
   display: flex;
   justify-content: center;
   align-items: center;

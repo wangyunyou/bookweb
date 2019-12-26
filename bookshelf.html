@@ -7,21 +7,99 @@
 		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<title>乐享智能借书柜</title>
+	<title>借书架</title>
 	<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
 	<link href="css/mui.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="css/global.css" />
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/bookshelf.css" />
 	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css" />
 </head>
 
 <body>
-	<header>
-
-	</header>
 	<main>
+		<div class="edit">
+			<span class="changeMode">编辑</span>
+		</div>
+		<div class="bigBookBox">
+			<div class="mui-input-row mui-checkbox mui-left">
+				<label>
+					<div class="thumbnail">
+						<image class="bookImg" src="img/bookBg.png"></image>
+						<div class="bookDetailBox">
+							<div class="name">深情史深情史深情史深情史深情史深情史深情史</div>
+							<div class="author">刘丽朵[著]</div>
+							<div class="press">出版社：中国友谊出版社</div>
+							<div class="ISBN">ISBN：9887505744813</div>
+							<div class="stock">库存不足</div>
+						</div>
+					</div>
+				</label>
+				<input name="checkbox1" value="Item 1" type="checkbox">
+			</div>
 
+			<div class="mui-input-row mui-checkbox mui-left">
+				<label>
+					<div class="thumbnail">
+						<image class="bookImg" src="img/bookBg.png"></image>
+						<div class="bookDetailBox">
+							<div class="name">深情史深情史深情史深情史深情史深情史深情史</div>
+							<div class="author">刘丽朵[著]</div>
+							<div class="press">出版社：中国友谊出版社</div>
+							<div class="ISBN">ISBN：9887505744813</div>
+							<div class="stock">库存不足</div>
+						</div>
+					</div>
+				</label>
+				<input name="checkbox1" value="Item 1" type="checkbox" disabled>
+			</div>
+
+			<div class="mui-input-row mui-checkbox mui-left">
+				<label>
+					<div class="thumbnail">
+						<image class="bookImg" src="img/bookBg.png"></image>
+						<div class="bookDetailBox">
+							<div class="name">深情史深情史深情史深情史深情史深情史深情史</div>
+							<div class="author">刘丽朵[著]</div>
+							<div class="press">出版社：中国友谊出版社</div>
+							<div class="ISBN">ISBN：9887505744813</div>
+							<div class="stock">库存不足</div>
+						</div>
+					</div>
+				</label>
+				<input name="checkbox1" value="Item 1" type="checkbox">
+			</div>
+
+			<div class="mui-input-row mui-checkbox mui-left">
+				<label>
+					<div class="thumbnail">
+						<image class="bookImg" src="img/bookBg.png"></image>
+						<div class="bookDetailBox">
+							<div class="name">深情史深情史深情史深情史深情史深情史深情史</div>
+							<div class="author">刘丽朵[著]</div>
+							<div class="press">出版社：中国友谊出版社</div>
+							<div class="ISBN">ISBN：9887505744813</div>
+							<div class="stock">库存不足</div>
+						</div>
+					</div>
+				</label>
+				<input name="checkbox1" value="Item 1" type="checkbox">
+			</div>
+
+			<div class="boxBlank"></div>
+		</div>
+		<div class="bottomBar">
+			<div style="width: calc(100% - 150px);">
+				<div class="checkOne">已选《<span>深情史深情史深情史</span>》</div>
+				<div class="mui-input-row mui-checkbox mui-left allCheck">
+					<label>
+						全选&nbsp;已选<span>1</span>本
+					</label>
+					<input name="checkbox1" value="Item 1" type="checkbox">
+				</div>
+			</div>
+			<div class="lend">借阅</div>
+		</div>
 		<div class="foot-blank"></div>
 	</main>
 	<footer>
@@ -69,7 +147,47 @@
 		</ul>
 	</footer>
 	<script type="text/javascript" charset="utf-8">
-		mui.init();
+		$(function () {
+			mui.init();
+			var isEdit = false;
+			$('.changeMode').click(() => {
+				//模式更换
+				isEdit = !isEdit;
+				if (isEdit) {
+					//编辑模式
+					$('.changeMode').text("完成")
+					$('.lend').text("移出借书架").addClass('active')
+					$('.checkOne').hide().siblings('.allCheck').show()
+				} else {
+					//借阅模式
+					$('.changeMode').text("编辑")
+					$('.lend').text("借阅").removeClass('active')
+					$('.allCheck').hide().siblings('.checkOne').show()
+				}
+			})
+		})
+
+		// function getVals() {
+		// 	var res = getCheckBoxRes('rds');
+		// 	if (res.length < 1) {
+		// 		mui.toast('请选择');
+		// 		return;
+		// 	}
+		// 	mui.toast(res);
+		// }
+
+		// function getCheckBoxRes(className) {
+		// 	var rdsObj = document.getElementsByClassName(className);
+		// 	var checkVal = new Array();
+		// 	var k = 0;
+		// 	for (i = 0; i < rdsObj.length; i++) {
+		// 		if (rdsObj[i].checked) {
+		// 			checkVal[k] = rdsObj[i].value;
+		// 			k++;
+		// 		}
+		// 	}
+		// 	return checkVal;
+		// }
 	</script>
 </body>
 
