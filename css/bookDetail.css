@@ -1,0 +1,70 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.toBookshelf {
+  width: 20%;
+  height: 100%;
+}
+
+.toBookshelf p {
+  height: 14px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.toBookshelfImgBox {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.toBookshelf img {
+  width: 18px;
+  height: 18px;
+}
+
+.dot {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  background: #f00;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+.add {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #424d59;
+  color: #fff;
+}
+
+.lend {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #47d9c2;
+  color: #fff;
+}

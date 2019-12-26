@@ -157,6 +157,7 @@
 			swipeBack: true //启用右滑关闭功能
 		});
 		$(function () {
+			//banner轮播
 			var mySwiper = new Swiper('#swiperImg', {
 				loop: true,
 				autoplay: {
@@ -166,12 +167,17 @@
 					el: '.swiper-pagination',
 				}
 			})
+			//通知轮播
 			var mySwiper = new Swiper('#swiperWords', {
 				loop: true,
 				direction: 'vertical',
 				autoplay: {
 					delay: 5000
 				}, //可选选项，自动滑动
+			})
+
+			$('.bookThumbnail').click(() => {
+				location.href = 'bookDetail.html'
 			})
 		})
 	</script>

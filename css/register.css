@@ -1,0 +1,78 @@
+.mui-input-group {
+  margin: 50px auto;
+  width: 85%;
+}
+
+.mui-input-group:before,
+.mui-input-group::after {
+  background: transparent;
+}
+
+.mui-input-group .mui-input-row {
+  height: 50px;
+  line-height: 50px;
+}
+
+.mui-input-row label {
+  font-size: 16px;
+  line-height: 50px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.mui-input-clear {
+  height: 50px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.mui-input-group .mui-input-row:after {
+  background-color: #e5e5e5;
+  left: 0;
+}
+
+.mui-icon.mui-icon-clear {
+  display: none;
+}
+
+input {
+  font-size: 14px;
+  color: #333;
+}
+
+.codeBox {
+  position: absolute;
+  font-size: 12px;
+  width: 100px;
+  height: 50px;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sendCode {
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #47d9c2;
+  color: #47d9c2;
+}
+
+.confirm,
+.bind {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 50px;
+  border: none;
+  background-image: linear-gradient(to right, #47d9c2, #2da7bd);
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(46, 203, 194, 0.24);
+}
+
+

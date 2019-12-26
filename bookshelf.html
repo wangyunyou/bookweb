@@ -17,12 +17,19 @@
 </head>
 
 <body>
+	<div class="noBooks">
+		<img src="img/none.png" alt="">
+		<p>
+			快去选选图书吧~
+		</p>
+	</div>
+
 	<main>
 		<div class="edit">
 			<span class="changeMode">编辑</span>
 		</div>
 		<div class="bigBookBox">
-			<div class="mui-input-row mui-checkbox mui-left">
+			<div class="mui-input-row mui-checkbox mui-left book">
 				<label>
 					<div class="thumbnail">
 						<image class="bookImg" src="img/bookBg.png"></image>
@@ -38,7 +45,7 @@
 				<input name="checkbox1" value="Item 1" type="checkbox">
 			</div>
 
-			<div class="mui-input-row mui-checkbox mui-left">
+			<div class="mui-input-row mui-checkbox mui-left book">
 				<label>
 					<div class="thumbnail">
 						<image class="bookImg" src="img/bookBg.png"></image>
@@ -54,7 +61,7 @@
 				<input name="checkbox1" value="Item 1" type="checkbox" disabled>
 			</div>
 
-			<div class="mui-input-row mui-checkbox mui-left">
+			<div class="mui-input-row mui-checkbox mui-left book">
 				<label>
 					<div class="thumbnail">
 						<image class="bookImg" src="img/bookBg.png"></image>
@@ -70,7 +77,7 @@
 				<input name="checkbox1" value="Item 1" type="checkbox">
 			</div>
 
-			<div class="mui-input-row mui-checkbox mui-left">
+			<div class="mui-input-row mui-checkbox mui-left book">
 				<label>
 					<div class="thumbnail">
 						<image class="bookImg" src="img/bookBg.png"></image>
@@ -165,6 +172,15 @@
 					$('.allCheck').hide().siblings('.checkOne').show()
 				}
 			})
+
+			//借书架为空
+			if ($('.mui-input-row.mui-checkbox.mui-left.book').length == 0) {
+				$('main').hide()
+				$('.noBooks').show()
+			} else {
+				$('main').show()
+				$('.noBooks').hide()
+			}
 		})
 
 		// function getVals() {

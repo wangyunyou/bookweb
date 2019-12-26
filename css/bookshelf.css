@@ -81,7 +81,7 @@
 
 .mui-radio input[type="radio"][disabled]:before,
 .mui-checkbox input[type="checkbox"][disabled]:before {
-  color: #000;
+  color: #777;
 }
 
 .thumbnail {
@@ -187,4 +187,21 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.noBooks {
+  display: none;
+}
+
+.noBooks img {
+  width: 60%;
+  margin: 120px auto;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.noBooks p {
+  text-align: center;
+  color: #777;
+  font-size: 16px;
 }
