@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>搜索</title>
+	<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<link href="css/mui.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="css/bookshelf.css" />
+	<link rel="stylesheet" type="text/css" href="css/bookDetail.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css" />
+</head>
+
+<body>
+	<div class="searchBox">
+		<input class="searchInput" type="text" placeholder="书名/作者/出版社/ISBN编号"></input>
+		<div id="search">搜索</div>
+	</div>
+	<ul class="searchResult">
+		<li>
+			<div class="thumbnail">
+				<div class="bookImgBox">
+					<image class="bookImg null" src="img/bookBg.png"></image>
+					<div class="bookNull"></div>
+				</div>
+				<div class="bookDetailBox">
+					<div class="name">深情史深情史深情史深情史深情史深情史深情史</div>
+					<div class="author">刘丽朵[著]</div>
+					<div class="press">出版社：中国友谊出版社</div>
+					<div class="ISBN">ISBN：9887505744813</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="thumbnail">
+				<div class="bookImgBox">
+					<image class="bookImg" src="img/bookBg.png"></image>
+				</div>
+				<div class="bookDetailBox">
+					<div class="name">深情史深情史深情史深情史深情史深情史深情史</div>
+					<div class="author">刘丽朵[著]</div>
+					<div class="press">出版社：中国友谊出版社</div>
+					<div class="ISBN">ISBN：9887505744813</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="thumbnail">
+				<div class="bookImgBox">
+					<image class="bookImg" src="img/bookBg.png"></image>
+				</div>
+				<div class="bookDetailBox">
+					<div class="name">深情史深情史深情史深情史深情史深情史深情史</div>
+					<div class="author">刘丽朵[著]</div>
+					<div class="press">出版社：中国友谊出版社</div>
+					<div class="ISBN">ISBN：9887505744813</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="thumbnail">
+				<div class="bookImgBox">
+					<image class="bookImg" src="img/bookBg.png"></image>
+				</div>
+				<div class="bookDetailBox">
+					<div class="name">深情史深情史深情史深情史深情史深情史深情史</div>
+					<div class="author">刘丽朵[著]</div>
+					<div class="press">出版社：中国友谊出版社</div>
+					<div class="ISBN">ISBN：9887505744813</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<script type="text/javascript" charset="utf-8">
+		$(function () {
+			mui.init();
+
+			$('#search').click(function () {
+				if ($('.searchInput').val() == '') {
+					mui.toast('请输入搜索内容')
+				} else {
+					location.reload()
+				}
+			})
+
+			$('.searchResult li').click(function () {
+				location.href = 'bookDetail.html'
+			})
+		})
+	</script>
+</body>
+
+</html>

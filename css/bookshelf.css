@@ -105,7 +105,8 @@
   margin-left: 10px;
 }
 
-.bookDetailBox div {
+.bookDetailBox div,
+.bookDetailBox div span {
   color: #777;
   font-size: 12px;
   line-height: 21px;
@@ -196,7 +197,7 @@
 .noBooks img {
   width: 60%;
   margin: 120px auto;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   display: block;
 }
 

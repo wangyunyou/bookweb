@@ -52,6 +52,10 @@
 				<image class="itemImg" src="img/Collection.png"></image>
 				重新绑卡
 			</div>
+			<div class="item">
+				<image class="itemImg" src="img/Collection.png"></image>
+				退押金
+			</div>
 		</div>
 		<div class="bgLine"></div>
 		<div>
@@ -69,7 +73,6 @@
 			</div>
 		</div>
 		<div class="foot-blank"></div>
-		<a href="register.html">注册</a>
 	</main>
 	<footer>
 		<ul class="foot">
@@ -116,7 +119,12 @@
 		</ul>
 	</footer>
 	<script type="text/javascript" charset="utf-8">
-		mui.init();
+		$(function () {
+			mui.init();
+			$('.mineBox').click(() => {
+				location.href = 'register.html'
+			})
+		})
 	</script>
 </body>
 

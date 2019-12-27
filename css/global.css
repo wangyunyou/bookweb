@@ -84,6 +84,8 @@ footer {
   margin: 10px auto;
   text-align: center;
   border: none;
+  color: #666;
+  font-size: 15px;
 }
 
 #search {
@@ -146,10 +148,45 @@ footer {
   margin-bottom: 10px;
 }
 
+.bookImgBox {
+  width: 100%;
+  position: relative;
+}
+
 .bookImg {
   width: 100%;
   display: block;
   height: auto;
+}
+
+.bookImg.null {
+  opacity: 0.8;
+}
+
+.bookNull:after {
+  content: "已借完";
+  width: 60px;
+  height: 60px;
+  font-size: 14px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.null::after {
+  content: "1";
+  width: 20px;
+  height: 20px;
 }
 
 .bookName {
@@ -174,4 +211,28 @@ footer {
 
 .hover {
   background: #fafafa;
+}
+
+.searchResult {
+  width: 100%;
+}
+
+.searchResult li {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.searchResult li::after {
+  content: " ";
+  width: calc(100% - 30px);
+  height: 1px;
+  background: #f5f5f5;
+  position: absolute;
+  bottom: 0;
+}
+
+.searchResult li .bookImgBox .bookImg {
+  width: 100%;
 }

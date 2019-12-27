@@ -71,36 +71,49 @@
 		</div>
 		<div class="titleBox">
 			<div class="title">新书</div>
-			<div class="titleTip">查看全部 ></div>
+			<div class="titleTip viewAll">查看全部 ></div>
 		</div>
 		<div class="bookBox">
 			<div class="bookThumbnail">
-				<image class="bookImg" src="img/bookBg.png"></image>
+				<div class="bookImgBox">
+					<image class="bookImg" src="img/bookBg.png"></image>
+				</div>
 				<div class="bookName">高等数学</div>
 				<div class="bookAuthor">刘丽朵[著]</div>
 			</div>
 			<div class="bookThumbnail">
-				<image class="bookImg" src="img/bookBg.png"></image>
+				<div class="bookImgBox">
+					<image class="bookImg" src="img/bookBg.png"></image>
+				</div>
 				<div class="bookName">深情史</div>
 				<div class="bookAuthor">刘丽朵[著]</div>
 			</div>
 			<div class="bookThumbnail">
-				<image class="bookImg" src="img/bookBg.png"></image>
+				<div class="bookImgBox">
+					<image class="bookImg" src="img/bookBg.png"></image>
+				</div>
 				<div class="bookName">深情史深情史深情史深情史深情史</div>
 				<div class="bookAuthor">刘丽朵[著]</div>
 			</div>
 			<div class="bookThumbnail">
-				<image class="bookImg" src="img/bookBg.png"></image>
+				<div class="bookImgBox">
+					<image class="bookImg null" src="img/bookBg.png"></image>
+					<div class="bookNull"></div>
+				</div>
 				<div class="bookName">高等数学</div>
 				<div class="bookAuthor">刘丽朵[著]</div>
 			</div>
 			<div class="bookThumbnail">
-				<image class="bookImg" src="img/bookBg.png"></image>
+				<div class="bookImgBox">
+					<image class="bookImg" src="img/bookBg.png"></image>
+				</div>
 				<div class="bookName">深情史深情史深情史深情史深情史</div>
 				<div class="bookAuthor">刘丽朵[著]</div>
 			</div>
 			<div class="bookThumbnail">
-				<image class="bookImg" src="img/bookBg.png"></image>
+				<div class="bookImgBox">
+					<image class="bookImg" src="img/bookBg.png"></image>
+				</div>
 				<div class="bookName">深情史深情史深情史深情史深情史</div>
 				<div class="bookAuthor">刘丽朵[著]</div>
 			</div>
@@ -154,7 +167,7 @@
 	<script src="js/swiper/js/swiper.min.js"></script>
 	<script type="text/javascript" charset="utf-8">
 		mui.init({
-			swipeBack: true //启用右滑关闭功能
+			swipeBack: false //启用右滑关闭功能
 		});
 		$(function () {
 			//banner轮播
@@ -176,8 +189,21 @@
 				}, //可选选项，自动滑动
 			})
 
-			$('.bookThumbnail').click(() => {
+			$('.bookThumbnail').click(function () {
 				location.href = 'bookDetail.html'
+			})
+
+			$('.viewAll').click(function () {
+				location.href = 'bookList.html'
+			})
+
+			$('#search').click(function () {
+				if ($('.searchInput').val() == '') {
+					mui.toast('请输入搜索内容')
+				} else {
+					location.href = 'searchResult.html'
+					$('.searchInput').val('')
+				}
 			})
 		})
 	</script>
