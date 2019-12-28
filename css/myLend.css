@@ -1,0 +1,47 @@
+.lendList li .bookDetailBox {
+  width: calc(75% - 10px);
+}
+.lendList li .bookDetailBox div.name {
+  width: 80%;
+}
+
+.lendList li .bookDetailBox {
+  position: relative;
+}
+
+.lendList li .bookDetailBox div.state {
+  color: #ff8b8b;
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.returnTimeBox {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.returnTime {
+  font-size: 12px;
+}
+
+.renew {
+  width: 100px;
+  height: 38px;
+  background: #46d8c1;
+  color: #fff;
+  border: none;
+}
+
+.renew.null {
+  display: none;
+}

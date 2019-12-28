@@ -3,12 +3,45 @@
   height: 115px;
   background: url(../img/bookTitle.png) no-repeat;
   background-size: 100% 100%;
+  padding: 15px;
 }
 
 .bookListTitle {
   color: #fff;
+  font-size: 16px;
 }
 
 .bookListContent {
+  margin-top: 5px;
+  height: 65px;
   color: #fff;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.addBtnBox {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.thumbnail .addShelf {
+  width: 100px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  background: #47d9c2;
+  border: none;
+  color: #fff;
+  float: right;
+}
+
+.thumbnail .addShelf.null {
+  background: #bfbfbf;
 }

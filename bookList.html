@@ -24,57 +24,75 @@
 			2019年度推荐书单
 		</div>
 		<div class="bookListContent">
-			2019年度推荐书单，与其用手机和网络虚度光阴，不如用一本好书来充实生命。阅读让表达更高级。
-		</div>
-
-	</div>
-
-
-	<div class="thumbnail">
-		<image class="bookImg" src="img/bookBg.png"></image>
-		<div class="bookDetailBox">
-			<div class="name">深情史深情史深情史</div>
-			<div class="author">刘丽朵[著]</div>
-			<div class="press">出版社：中国友谊出版社</div>
-			<div class="ISBN">ISBN：9887505744813</div>
-			<button>加入借书架</button>
+			2019年度推荐书单，与其用手机和网络虚度光阴，不如用一本好书来充实生命。阅读让表达更高级。2019年度推荐书单，与其用手机和网络虚度光阴，不如用一本好书来充实生命。阅读让表达更高级。2019年度推荐书单，与其用手机和网络虚度光阴，不如用一本好书来充实生命。阅读让表达更高级。
 		</div>
 	</div>
 
-	<div class="thumbnail">
-		<image class="bookImg" src="img/bookBg.png"></image>
-		<div class="bookDetailBox">
-			<div class="name">深情史深情史深情史</div>
-			<div class="author">刘丽朵[著]</div>
-			<div class="press">出版社：中国友谊出版社</div>
-			<div class="ISBN">ISBN：9887505744813</div>
-			<button>加入借书架</button>
-		</div>
-	</div>
-
-	<div class="thumbnail">
-		<image class="bookImg" src="img/bookBg.png"></image>
-		<div class="bookDetailBox">
-			<div class="name">深情史深情史深情史</div>
-			<div class="author">刘丽朵[著]</div>
-			<div class="press">出版社：中国友谊出版社</div>
-			<div class="ISBN">ISBN：9887505744813</div>
-			<button>加入借书架</button>
-		</div>
-	</div>
-
-	<div class="thumbnail">
-		<image class="bookImg" src="img/bookBg.png"></image>
-		<div class="bookDetailBox">
-			<div class="name">深情史深情史深情史</div>
-			<div class="author">刘丽朵[著]</div>
-			<div class="press">出版社：中国友谊出版社</div>
-			<div class="ISBN">ISBN：9887505744813</div>
-			<button>加入借书架</button>
-		</div>
-	</div>
+	<ul class="bookList">
+		<li>
+			<div class="thumbnail">
+				<image class="bookImg" src="img/bookBg.png"></image>
+				<div class="bookDetailBox">
+					<div class="name">深情史深情史深情史</div>
+					<div class="author">刘丽朵[著]</div>
+					<div class="press">出版社：中国友谊出版社</div>
+					<div class="ISBN">ISBN：9887505744813</div>
+					<div class="addBtnBox">
+						<button class="addShelf add">加入借书架</button>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="thumbnail">
+				<image class="bookImg" src="img/bookBg.png"></image>
+				<div class="bookDetailBox">
+					<div class="name">深情史深情史深情史</div>
+					<div class="author">刘丽朵[著]</div>
+					<div class="press">出版社：中国友谊出版社</div>
+					<div class="ISBN">ISBN：9887505744813</div>
+					<div class="addBtnBox">
+						<button class="addShelf add">加入借书架</button>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="thumbnail">
+				<image class="bookImg" src="img/bookBg.png"></image>
+				<div class="bookDetailBox">
+					<div class="name">深情史深情史深情史</div>
+					<div class="author">刘丽朵[著]</div>
+					<div class="press">出版社：中国友谊出版社</div>
+					<div class="ISBN">ISBN：9887505744813</div>
+					<div class="addBtnBox">
+						<button class="addShelf add">加入借书架</button>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="thumbnail">
+				<image class="bookImg" src="img/bookBg.png"></image>
+				<div class="bookDetailBox">
+					<div class="name">深情史深情史深情史</div>
+					<div class="author">刘丽朵[著]</div>
+					<div class="press">出版社：中国友谊出版社</div>
+					<div class="ISBN">ISBN：9887505744813</div>
+					<div class="addBtnBox">
+						<button class="addShelf null" disabled="true">已借完</button>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
 	<script type="text/javascript" charset="utf-8">
-		mui.init();
+		$(function () {
+			mui.init();
+			$('.add').click(function () {
+				$(this).removeClass('.add').addClass('null').text('已添加').attr('disabled', 'true')
+			})
+		})
 	</script>
 </body>
 

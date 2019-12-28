@@ -32,42 +32,42 @@
 		</div>
 
 		<div class="itemBar">
-			<div class="item">
+			<div class="item" id="myLend">
 				<image class="itemImg" src="img/borrow.png"></image>
 				我的借阅
 			</div>
-			<div class="item">
+			<div class="item" id="myMessage">
 				<image class="itemImg" src="img/news.png"></image>
 				我的消息
 			</div>
-			<div class="item">
+			<div class="item" id="myOuttime">
 				<image class="itemImg" src="img/overtime.png"></image>
 				书籍逾期
 			</div>
-			<div class="item">
-				<image class="itemImg" src="img/overtime.png"></image>
+			<div class="item" id="myLose">
+				<image class="itemImg" src="img/lose.png"></image>
 				书籍丢失
 			</div>
-			<div class="item">
-				<image class="itemImg" src="img/Collection.png"></image>
+			<div class="item" id="myChangeCard">
+				<image class="itemImg" src="img/card.png"></image>
 				重新绑卡
 			</div>
-			<div class="item">
-				<image class="itemImg" src="img/Collection.png"></image>
+			<div class="item" id="myDeposit">
+				<image class="itemImg" src="img/money.png"></image>
 				退押金
 			</div>
 		</div>
 		<div class="bgLine"></div>
 		<div>
-			<div class="menuItems">
+			<div class="menuItems" id="settings">
 				<div>
-					<i class="fa fa-cogs" aria-hidden="true"></i> 设置
+					<img class="settings" src="img/set.png" alt=""> 设置
 				</div>
 				<i class="fa fa-angle-right" aria-hidden="true"></i>
 			</div>
-			<div class="menuItems">
+			<div class="menuItems" id="help">
 				<div>
-					<i class="fa fa-commenting" aria-hidden="true"></i> 帮助
+					<img class="help" src="img/help.png" alt=""> 帮助
 				</div>
 				<i class="fa fa-angle-right" aria-hidden="true"></i>
 			</div>
@@ -121,8 +121,41 @@
 	<script type="text/javascript" charset="utf-8">
 		$(function () {
 			mui.init();
+			//个人信息
 			$('.mineBox').click(() => {
 				location.href = 'register.html'
+			})
+			// 我的借阅
+			$('#myLend').click(() => {
+				location.href = 'myLend.html'
+			})
+			//我的消息
+			$('#myMessage').click(() => {
+				location.href = 'myMessage.html'
+			})
+			//书籍逾期
+			$('#myOuttime').click(() => {
+				location.href = 'myOuttime.html'
+			})
+			//书籍丢失
+			$('#myLose').click(() => {
+				location.href = 'myLose.html'
+			})
+			//重新绑卡
+			$('#myChangeCard').click(() => {
+				location.href = 'myChangeCard.html'
+			})
+			//退押金
+			$('#myDeposit').click(() => {
+				location.href = 'myDeposit.html'
+			})
+			//设置
+			$('#settings').click(() => {
+				location.href = 'settings.html'
+			})
+			//帮助
+			$('#help').click(() => {
+				location.href = 'help.html'
 			})
 		})
 	</script>

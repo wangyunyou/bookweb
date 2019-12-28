@@ -1,0 +1,25 @@
+.messageList {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.messageList li {
+  border-bottom: 1px solid #f5f5f5;
+  padding: 8px 0;
+}
+
+.messageList li div {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.messageList li div.messageTitle {
+  font-size: 15px;
+  color: #333;
+}
+
+.messageList li div.messageTime {
+  font-size: 12px;
+  color: #aaa;
+}

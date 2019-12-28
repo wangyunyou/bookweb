@@ -32,7 +32,7 @@
 				<li>哲学与宗教</li>
 				<li>外语</li>
 			</ul>
-			<div class="addClass">
+			<div class="addClass" id="addClass">
 				+
 			</div>
 		</div>
@@ -131,6 +131,10 @@
 
 			$('.classify li').click(function () {
 				$(this).addClass('active').siblings().removeClass('active')
+			})
+
+			$('#addClass').click(() => {
+				location.href = 'myClassify.html'
 			})
 		})
 	</script>

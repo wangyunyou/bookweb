@@ -14,7 +14,7 @@
   align-items: center;
   background: #fff;
   border-radius: 5px 5px 0 0;
-  box-shadow: 1px 1px 12px rgba(71, 217, 194, 0.2);
+  box-shadow: -1px -1px 10px rgba(71, 217, 194, 0.2);
   padding: 20px;
   box-sizing: border-box;
   position: relative;
@@ -99,6 +99,26 @@
   margin-right: 5px;
   width: 15px;
   color: #47d9c2;
+}
+
+.menuItems div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.settings {
+  width: 14px;
+  height: 14px;
+  margin-right: 7px;
+  display: inline-block;
+}
+
+.help {
+  width: 9px;
+  height: 14px;
+  margin-left: 2px;
+  margin-right: 10px;
 }
 
 .menuItems i.fa.fa-angle-right {

@@ -57,3 +57,43 @@
   color: #fff;
   text-align: center;
 }
+
+.myClassifyTitle,
+.clickAddClassifyTitle {
+  width: 100%;
+  padding: 40px 15px 15px 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clickAddClassifyTitle {
+  padding: 15px;
+}
+
+.myClassifyTitle .edit {
+  color: #47d9c2;
+}
+
+.myClassify,
+.waitAdd {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.myClassify li,
+.waitAdd li {
+  width: 30%;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  background: #e2e7f0;
+  color: #333;
+  margin: 6px 0;
+  font-size: 14px;
+  border-radius: 4px;
+}
