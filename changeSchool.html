@@ -33,25 +33,11 @@
 			<input type="text" id="school" class="mui-input-clear" placeholder="请选择学校">
 		</div>
 
-		<button type="button" class="bind">绑定</button>
+		<button type="button" class="bind">确定</button>
 	</form>
 	<script src="js/mui.picker.min.js"></script>
 	<script src="js/mui.poppicker.js"></script>
 	<script src="js/citydata.js"></script>
-	<script>
-		$(function () {
-			mui.init();
-			$('input').blur(() => {
-				$("html,body").animate({
-					"scrollTop": "40px"
-				}, 1000);
-			})
-
-			$('.bind').click(() => {
-				location.href = 'pay.html'
-			})
-		})
-	</script>
 	<script type="text/javascript" charset="utf-8">
 		//这里的$是mui!!!
 		(function ($, doc) {

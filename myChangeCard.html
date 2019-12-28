@@ -43,11 +43,6 @@
 	<script type="text/javascript" charset="utf-8">
 		$(function () {
 			mui.init();
-			$('input').blur(() => {
-				$("html,body").animate({
-					"scrollTop": "40px"
-				}, 1000);
-			})
 
 			$('.confirm').click(() => {
 				mui.toast('重新绑卡成功')

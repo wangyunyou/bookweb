@@ -33,7 +33,7 @@
 			<input type="text" id="date" data-options='{"type":"month","beginYear":1901,"endYear":2030}'
 				class="mui-input-clear btn" placeholder="请选择出生年月">
 		</div>
-		<button type="button" class="bind">绑定</button>
+		<button type="button" class="bind">确定</button>
 	</form>
 	<script src="js/mui.picker.min.js"></script>
 	<script src="js/mui.poppicker.js"></script>
@@ -42,7 +42,6 @@
 		//这里的$是mui!!!
 		(function ($, doc) {
 			$.init();
-
 			// 选择日期
 			var result = $('#date')[0];
 			var btns = $('.btn');
