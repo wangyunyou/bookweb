@@ -7,7 +7,7 @@
 		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<title>绑定</title>
+	<title>更改学校</title>
 	<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
 	<link href="css/mui.css" rel="stylesheet" />
@@ -18,12 +18,12 @@
 </head>
 
 <body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">更改学校</h1>
+	</header>
+	<div style="height: 44px;"></div>
 	<form class="mui-input-group">
-		<div class="mui-input-row">
-			<label>出生年月</label>
-			<input type="text" id="date" data-options='{"type":"month","beginYear":1901,"endYear":2030}'
-				class="mui-input-clear btn" placeholder="请选择出生年月">
-		</div>
 		<div class="mui-input-row">
 			<label>行政区域</label>
 			<input type="text" id="city" class="mui-input-clear" placeholder="请选择行政区域">
@@ -56,32 +56,6 @@
 		//这里的$是mui!!!
 		(function ($, doc) {
 			$.init();
-
-			// 选择日期
-			var result = $('#date')[0];
-			var btns = $('.btn');
-			btns.each(function (i, btn) {
-				btn.addEventListener('tap', function () {
-					var _self = this;
-					if (_self.picker) {
-						_self.picker.show(function (rs) {
-							result.innerText = '选择结果: ' + rs.text;
-							_self.picker.dispose();
-							_self.picker = null;
-						});
-					} else {
-						var optionsJson = this.getAttribute('data-options') || '{}';
-						var options = JSON.parse(optionsJson);
-						var id = this.getAttribute('id');
-						_self.picker = new $.DtPicker(options);
-						_self.picker.show(function (rs) {
-							result.value = rs.text;
-							_self.picker.dispose();
-							_self.picker = null;
-						});
-					}
-				}, false);
-			});
 
 			// 选择区域
 			var _getParam = function (obj, param) {

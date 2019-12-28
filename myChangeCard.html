@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>重新绑卡</title>
+	<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<link href="css/mui.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="css/register.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css" />
+</head>
+
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">重新绑卡</h1>
+	</header>
+	<div style="height: 44px;"></div>
+	<form class="mui-input-group">
+		<div class="mui-input-row">
+			<label>IC卡号</label>
+			<input type="text" class="mui-input-clear" placeholder="请输入IC卡号">
+		</div>
+		<div class="mui-input-row">
+			<label>再次输入</label>
+			<input type="text" class="mui-input-clear" placeholder="请再次输入IC卡号">
+		</div>
+		<div class="mui-input-row">
+			<label>验证码</label>
+			<input type="number" class="mui-input-clear" placeholder="请输入验证码">
+			<div class="codeBox">
+				<button type="button" class="sendCode">发送验证码</button>
+			</div>
+		</div>
+		<button type="button" class="confirm">确定</button>
+	</form>
+	<script type="text/javascript" charset="utf-8">
+		$(function () {
+			mui.init();
+			$('input').blur(() => {
+				$("html,body").animate({
+					"scrollTop": "40px"
+				}, 1000);
+			})
+
+			$('.confirm').click(() => {
+				mui.toast('重新绑卡成功')
+			})
+		})
+	</script>
+</body>
+
+</html>

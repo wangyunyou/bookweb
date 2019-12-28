@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>设置</title>
+	<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<link href="css/mui.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="css/mine.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css" />
+</head>
+
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">设置</h1>
+	</header>
+	<div style="height: 44px;"></div>
+	<div>
+		<div class="menuItems" id="changePhoneNumber">
+			<div>
+				更改手机号
+			</div>
+			<i class="fa fa-angle-right" aria-hidden="true"></i>
+		</div>
+		<div class="menuItems" id="changeMyInfo">
+			<div>
+				更改个人信息
+			</div>
+			<i class="fa fa-angle-right" aria-hidden="true"></i>
+		</div>
+		<div class="menuItems" id="changeSchool">
+			<div>
+				更改学校
+			</div>
+			<i class="fa fa-angle-right" aria-hidden="true"></i>
+		</div>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+		$(function () {
+			mui.init();
+			$('#changePhoneNumber').click(() => {
+				location.href = 'changePhoneNumber.html'
+			})
+			$('#changeMyInfo').click(() => {
+				location.href = 'changeMyInfo.html'
+			})
+			$('#changeSchool').click(() => {
+				location.href = 'changeSchool.html'
+			})
+		})
+	</script>
+</body>
+
+</html>
