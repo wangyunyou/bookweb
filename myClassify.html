@@ -32,6 +32,7 @@
 		<li>科技</li>
 		<li>人文</li>
 		<li>人文</li>
+		<li>人文</li>
 	</ul>
 	<div class="clickAddClassifyTitle">
 		点击增加分类
@@ -51,6 +52,46 @@
 	<script type="text/javascript" charset="utf-8">
 		$(function () {
 			mui.init();
+			let isEdit = false
+			$('.edit').on('click', function () {
+				isEdit = !isEdit
+				$('.waitAdd li').removeClass('active')
+				if (isEdit == true) {
+					//编辑状态
+					$(this).text('完成')
+					$('.myClassify li').addClass('active')
+				} else if (isEdit == false) {
+					//非编辑状态
+					$(this).text('编辑')
+					$('.myClassify li').removeClass('active')
+				}
+			})
+
+			$('.waitAdd').delegate('li', 'click', function () {
+				if ($('.myClassify li').length >= 12) {
+					mui.toast('最多12个')
+				} else {
+					$(this).remove()
+					if (isEdit == true) {
+						$(this).addClass('active')
+					}
+					$('.myClassify').append($(this).prop("outerHTML"))
+				}
+			})
+
+			$('.myClassify').delegate('li', 'click', function () {
+				if (isEdit) {
+					//编辑状态
+					if ($('.myClassify li').length <= 6) {
+						mui.toast('最少6个')
+					} else {
+						$(this).remove()
+						$('.waitAdd').append($(this).prop("outerHTML"))
+					}
+				} else {
+					//非编辑状态
+				}
+			})
 		})
 	</script>
 </body>

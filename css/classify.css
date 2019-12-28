@@ -79,21 +79,36 @@
 .myClassify,
 .waitAdd {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  padding: 0 15px;
+  padding: 0 5px;
 }
 
 .myClassify li,
 .waitAdd li {
-  width: 30%;
+  width: 29%;
   text-align: center;
   height: 32px;
   line-height: 32px;
   background: #e2e7f0;
   color: #333;
-  margin: 6px 0;
   font-size: 14px;
   border-radius: 4px;
+  margin: 6px 2.16%;
+  position: relative;
+}
+
+.myClassify li.active::after {
+  content: "ⓧ";
+  color: rgb(55, 124, 252);
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
