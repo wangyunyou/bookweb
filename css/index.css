@@ -82,3 +82,15 @@
   text-overflow: ellipsis;
   font-size: 12px;
 }
+
+.bookList {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.bookListImg {
+  width: 100%;
+  height: auto;
+}

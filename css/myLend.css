@@ -45,3 +45,7 @@
 .renew.null {
   display: none;
 }
+
+.renew.alrenew {
+  background: #bfbfbf;
+}

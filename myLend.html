@@ -56,6 +56,27 @@
 					<div class="author">刘丽朵[著]</div>
 					<div class="press">出版社：中国友谊出版社</div>
 					<div class="ISBN">ISBN：9887505744813</div>
+					<div class="state">已预约</div>
+				</div>
+
+			</div>
+			<div class="returnTimeBox">
+				<div class="returnTime">
+					<div>预约剩余时间：<span class="timer">24:00:00</span></div>
+				</div>
+				<button class="renew cancle">取消预约</button>
+			</div>
+		</li>
+		<li>
+			<div class="thumbnail">
+				<div class="bookImgBox">
+					<image class="bookImg" src="img/bookBg.png"></image>
+				</div>
+				<div class="bookDetailBox">
+					<div class="name">深情史深情史深情史深情史深情史深情史深情史</div>
+					<div class="author">刘丽朵[著]</div>
+					<div class="press">出版社：中国友谊出版社</div>
+					<div class="ISBN">ISBN：9887505744813</div>
 					<div class="state">已归还</div>
 				</div>
 			</div>
@@ -80,9 +101,34 @@
 				}
 			})
 
+			$('.renew').click(function () {
+				$(this).addClass('alrenew').text('已续借').attr('disabled', 'true')
+			})
+
+			$('.cancle').click(function () {
+				mui.toast('取消预约成功')
+				$(this).parents('li').remove()
+			})
+
 			$('.searchResult li').click(function () {
 				location.href = 'bookDetail.html'
 			})
+
+			//倒计时
+			var oldtime = new Date(); //传入的时间
+			oldtime = oldtime.setDate(oldtime.getDate() + 1); //模拟24小时后的时间
+			function timer(oldtime) {
+				var newtime = new Date();
+				var time = (oldtime - newtime) / 1000;
+				var h = parseInt(time / 60 / 60 % 24);
+				var m = parseInt(time / 60 % 60);
+				var s = parseInt(time % 60);
+				return h + ":" + m + ":" + s;
+			}
+			setInterval(function () {
+				$('.timer').text(timer(oldtime));
+			}, 1000)
+
 		})
 	</script>
 </body>
