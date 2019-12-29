@@ -47,6 +47,8 @@ footer {
 .chooseBookNumber .mui-input-row.mui-radio.mui-left,
 .chooseAddress .mui-input-row.mui-radio.mui-left {
   margin: 5px 0;
+  display: flex;
+  height: 20px;
 }
 
 .chooseBookNumber .mui-radio.mui-left label,
@@ -55,6 +57,7 @@ footer {
 .chooseAddress .mui-checkbox.mui-left label {
   padding-right: 20px;
   padding-left: 40px;
+  line-height: 20px;
 }
 
 .chooseBookNumber .mui-radio input[type="radio"]:checked:before,

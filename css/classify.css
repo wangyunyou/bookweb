@@ -50,12 +50,13 @@
 .addClass {
   width: 20px;
   height: 20px;
-  line-height: 16px;
-  font-size: 18px;
   border-radius: 10px;
-  background: #47d9c2;
-  color: #fff;
-  text-align: center;
+}
+
+.addClass img {
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 .myClassifyTitle,
