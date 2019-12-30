@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>重新绑卡</title>
+    <script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+    <link href="css/mui.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    <link rel="stylesheet" type="text/css" href="css/register.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">重新绑卡</h1>
+    </header>
+    <div style="height: 44px;"></div>
+    <div class="payTip">
+        <img src="img/pay.png" alt="">
+        <p>
+            重新绑卡需支付30元
+        </p>
+    </div>
+
+    <button class="pay">支付</button>
+
+    <script type="text/javascript" charset="utf-8">
+        $(function () {
+            mui.init();
+            $('.pay').click(() => {
+                location.href = 'index.html'
+            })
+        })
+    </script>
+</body>
+
+</html>

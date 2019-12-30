@@ -107,7 +107,7 @@
 
 .bookDetailBox div,
 .bookDetailBox div span {
-  color: #777;
+  color: #999;
   font-size: 12px;
   line-height: 21px;
   white-space: nowrap;
@@ -126,6 +126,11 @@
   color: #333;
   font-size: 14px;
   line-height: 33px;
+}
+
+.bookDetailBox div.school {
+  margin-top: 5px;
+  color: #666;
 }
 
 .boxBlank {
