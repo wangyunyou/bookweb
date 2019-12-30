@@ -43,7 +43,7 @@
 				<div class="returnTime">
 					<div>最迟归还时间：2019-12-12</div>
 				</div>
-				<button class="renew">续借</button>
+				<button class="renew continue">续借</button>
 			</div>
 		</li>
 		<li>
@@ -101,13 +101,27 @@
 				}
 			})
 
-			$('.renew').click(function () {
-				$(this).addClass('alrenew').text('已续借').attr('disabled', 'true')
+
+			$('.continue').click(function () {
+				var that = $(this)
+				var btnArray = ['否', '是'];
+				mui.confirm('  ', '确认续借？', btnArray, function (e) {
+					if (e.index == 1) {
+						mui.toast('续借成功')
+						that.addClass('alrenew').text('已续借').attr('disabled', 'true')
+					}
+				})
 			})
 
 			$('.cancle').click(function () {
-				mui.toast('取消预约成功')
-				$(this).parents('li').remove()
+				var that = $(this)
+				var btnArray = ['否', '是'];
+				mui.confirm('  ', '确认取消预约？', btnArray, function (e) {
+					if (e.index == 1) {
+						mui.toast('取消预约成功')
+						that.parents('li').remove()
+					}
+				})
 			})
 
 			$('.searchResult li').click(function () {
