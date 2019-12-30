@@ -38,13 +38,6 @@
 	<script src="js/mui.picker.min.js"></script>
 	<script src="js/mui.poppicker.js"></script>
 	<script src="js/citydata.js"></script>
-	<script>
-		$(function () {
-			$('.bind').click(() => {
-				location.href = 'pay.html'
-			})
-		})
-	</script>
 	<script type="text/javascript" charset="utf-8">
 		//这里的$是mui!!!
 		(function ($, doc) {
@@ -112,6 +105,12 @@
 					school.value = selectItems[0].text
 				})
 			})
+
+			var bind = document.getElementsByClassName("bind")[0];
+			bind.addEventListener("tap", function () {
+				alert(1)
+			});
+
 		})(mui, document);
 	</script>
 </body>
