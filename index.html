@@ -55,17 +55,17 @@
 			<div class="swiper-container" id="swiperWords">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<a href="#">
+						<a href="messageDetail.html">
 							<div class="noticeDetail">恭喜您成为本校校长！！！</div>
 						</a>
 					</div>
 					<div class="swiper-slide">
-						<a href="#">
+						<a href="messageDetail.html">
 							<div class="noticeDetail">恭喜您中奖88888888元，请速来本校领取！！！</div>
 						</a>
 					</div>
 					<div class="swiper-slide">
-						<a href="#">
+						<a href="messageDetail.html">
 							<div class="noticeDetail">您快要逾期了，快点还书！！！</div>
 						</a>
 					</div>
@@ -222,10 +222,11 @@
 			})
 
 			$('#search').click(function () {
-				if ($('.searchInput').val() == '') {
+				var searchWords = $('.searchInput').val()
+				if (searchWords == '') {
 					mui.toast('请输入搜索内容')
 				} else {
-					location.href = 'searchResult.html'
+					location.href = 'searchResult.html?searchWords=' + encodeURI(searchWords)
 					$('.searchInput').val('')
 				}
 			})

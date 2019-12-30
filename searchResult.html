@@ -84,6 +84,21 @@
 		$(function () {
 			mui.init();
 
+			var str = location.href
+			//获取页面参数
+			function $_GET(name, urls) {
+				var url = urls || window.location.href;
+				if (!name == true) {
+					var data = url.match(new RegExp("([^?&]*)=([^?&]*)", "ig"));
+					return data != null ? data : [];
+				} else {
+					var test = new RegExp(name + "=", "i").test(url);
+					return test ? url.match(new RegExp(name + "=([^?&]*)", "i"))[1] : "";
+				}
+			};
+			var searchWords = $_GET('searchWords');
+			$('.searchInput').val(decodeURI(searchWords))
+
 			$('#search').click(function () {
 				if ($('.searchInput').val() == '') {
 					mui.toast('请输入搜索内容')
