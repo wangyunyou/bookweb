@@ -206,7 +206,6 @@
 				}
 			})
 
-
 			//选中值变化
 			mui('.mui-input-group').on('change', 'input', function () {
 				if (isEdit) {
@@ -221,9 +220,6 @@
 						allCheck.push(list[i].checked)
 					}
 					console.log(chooseCheck)
-					console.log(allCheck)
-					console.log(isAllEqual(allCheck))
-					isAllEqual(allCheck)
 					if (isAllEqual(allCheck) == true && allCheck[0] == true) {
 						var isAllCheck = document.getElementsByClassName('allCheckInput')[0]
 						isAllCheck.checked = true
