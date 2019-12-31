@@ -105,7 +105,7 @@
 					<label>
 						全选&nbsp;已选<span class="num">0</span>本
 					</label>
-					<input name="checkbox1" value="Item 1" type="checkbox">
+					<input name="checkbox1" value="Item 1" type="checkbox" class="allCheckInput">
 				</div>
 			</div>
 			<div class="lend">借阅</div>
@@ -160,10 +160,13 @@
 		$(function () {
 			mui.init();
 			var isEdit = false;
+
 			//借阅选中的书
 			var chooseRadio = '';
+
 			//编辑选中的书
 			var chooseCheck = [];
+
 			//获取元素是否被禁用
 			var disabledList = []
 			$('input').each(function () {
@@ -210,12 +213,25 @@
 					//编辑模式
 					var list = document.getElementsByClassName('check');
 					chooseCheck = []
+					var allCheck = []
 					for (var i = 0; i < list.length; i++) {
 						if (list[i].checked == true) {
 							chooseCheck.push(list[i].value)
 						}
+						allCheck.push(list[i].checked)
 					}
 					console.log(chooseCheck)
+					console.log(allCheck)
+					console.log(isAllEqual(allCheck))
+					isAllEqual(allCheck)
+					if (isAllEqual(allCheck) == true && allCheck[0] == true) {
+						var isAllCheck = document.getElementsByClassName('allCheckInput')[0]
+						isAllCheck.checked = true
+					} else {
+						var isAllCheck = document.getElementsByClassName('allCheckInput')[0]
+						isAllCheck.checked = false
+					}
+
 					$('.num').text(chooseCheck.length)
 				} else {
 					//借阅模式
@@ -231,6 +247,39 @@
 				}
 			});
 
+			//全选
+			mui('.allCheck').on('change', 'input', function () {
+				var isAllCheck = document.getElementsByClassName('allCheckInput')[0]
+				if (isAllCheck.checked == true) {
+					var list = document.getElementsByClassName('check');
+					chooseCheck = []
+					for (var i = 0; i < list.length; i++) {
+						list[i].checked = true
+						chooseCheck.push(list[i].value)
+					}
+					console.log(chooseCheck)
+					$('.num').text(chooseCheck.length)
+				} else {
+					var list = document.getElementsByClassName('check');
+					chooseCheck = []
+					for (var i = 0; i < list.length; i++) {
+						list[i].checked = false
+					}
+					console.log(chooseCheck)
+					$('.num').text(chooseCheck.length)
+				}
+			});
+			//全选判断
+			function isAllEqual(array) {
+				if (array.length > 0) {
+					return !array.some(function (value, index) {
+						return value !== array[0];
+					});
+				} else {
+					return true;
+				}
+			}
+
 			//借书架为空
 			if ($('.mui-input-row.mui-left.book').length == 0) {
 				$('main').hide()
@@ -239,6 +288,8 @@
 				$('main').show()
 				$('.noBooks').hide()
 			}
+
+
 		})
 
 		// function getVals() {
