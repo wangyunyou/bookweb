@@ -108,7 +108,7 @@
 					<input name="checkbox1" value="Item 1" type="checkbox" class="allCheckInput">
 				</div>
 			</div>
-			<div class="lend">借阅</div>
+			<div class="lend borrow">借阅</div>
 		</div>
 		<div class="foot-blank"></div>
 	</main>
@@ -180,7 +180,7 @@
 				if (isEdit) {
 					//编辑模式
 					$('.changeMode').text("完成")
-					$('.lend').text("移出借书架").addClass('active')
+					$('.lend').text("移出借书架").addClass('active').removeClass('borrow')
 					$('.checkOne').hide().siblings('.allCheck').css('display', 'flex')
 					$('.mui-input-row.mui-left').removeClass('mui-radio').addClass('mui-checkbox')
 					$('input').attr('type', 'checkbox').attr('name', 'checkbox').removeAttr('disabled')
@@ -191,7 +191,7 @@
 				} else {
 					//借阅模式
 					$('.changeMode').text("编辑")
-					$('.lend').text("借阅").removeClass('active')
+					$('.lend').text("借阅").removeClass('active').addClass('borrow')
 					$('.allCheck').hide().siblings('.checkOne').show()
 					$('.mui-input-row.mui-left').removeClass('mui-checkbox').addClass('mui-radio')
 					$('input').attr('type', 'radio').attr('name', 'radio')
@@ -276,6 +276,20 @@
 				}
 			}
 
+			$('.lend').on('click', function () {
+				if (isEdit) {
+					//编辑模式
+					alert(chooseCheck)
+					mui.toast('已移出借书架')
+					setTimeout(() => {
+						location.reload()
+					}, 1200);
+				} else {
+					//借阅模式
+					alert(chooseRadio)
+				}
+			})
+
 			//借书架为空
 			if ($('.mui-input-row.mui-left.book').length == 0) {
 				$('main').hide()
@@ -284,31 +298,7 @@
 				$('main').show()
 				$('.noBooks').hide()
 			}
-
-
 		})
-
-		// function getVals() {
-		// 	var res = getCheckBoxRes('rds');
-		// 	if (res.length < 1) {
-		// 		mui.toast('请选择');
-		// 		return;
-		// 	}
-		// 	mui.toast(res);
-		// }
-
-		// function getCheckBoxRes(className) {
-		// 	var rdsObj = document.getElementsByClassName(className);
-		// 	var checkVal = new Array();
-		// 	var k = 0;
-		// 	for (i = 0; i < rdsObj.length; i++) {
-		// 		if (rdsObj[i].checked) {
-		// 			checkVal[k] = rdsObj[i].value;
-		// 			k++;
-		// 		}
-		// 	}
-		// 	return checkVal;
-		// }
 	</script>
 </body>
 
