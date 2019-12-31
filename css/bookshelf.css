@@ -22,7 +22,7 @@
   width: 100%;
 }
 
-.mui-input-group .mui-input-row {
+.bigBookBox .mui-input-group .mui-input-row {
   height: auto;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .mui-input-row.mui-checkbox.mui-left,
-.mui-input-row.mui-radio.mui-left {
+.bigBookBox .mui-input-row.mui-radio.mui-left {
   width: 100%;
   padding: 20px 15px;
   box-sizing: border-box;
@@ -45,7 +45,7 @@
   position: relative;
 }
 
-.mui-input-row.mui-left::after {
+.bigBookBox .mui-input-row.mui-left::after {
   content: " ";
   width: 100%;
   height: 1px;
