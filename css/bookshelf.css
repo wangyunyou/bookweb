@@ -22,7 +22,20 @@
   width: 100%;
 }
 
-.mui-input-row.mui-checkbox.mui-left {
+.mui-input-group .mui-input-row {
+  height: auto;
+}
+
+.mui-input-group:before {
+  background-color: transparent;
+}
+
+.mui-input-group:after {
+  background-color: transparent;
+}
+
+.mui-input-row.mui-checkbox.mui-left,
+.mui-input-row.mui-radio.mui-left {
   width: 100%;
   padding: 20px 15px;
   box-sizing: border-box;
@@ -32,7 +45,7 @@
   position: relative;
 }
 
-.mui-input-row.mui-checkbox.mui-left::after {
+.mui-input-row.mui-left::after {
   content: " ";
   width: 100%;
   height: 1px;
@@ -42,7 +55,11 @@
   left: 42px;
 }
 
-.mui-input-row.mui-checkbox.mui-left.allCheck::after {
+.mui-input-row.mui-left:last-child::after {
+  background: transparent;
+}
+
+.mui-input-row.mui-left.allCheck::after {
   background: transparent;
 }
 
@@ -166,19 +183,23 @@
   background: #ff7272;
 }
 
-.mui-input-row.mui-checkbox.mui-left.allCheck {
+.mui-input-row.mui-left.allCheck {
   display: none;
   width: 100%;
   height: 100%;
 }
 
-.mui-input-row.mui-checkbox.mui-left.allCheck label {
+.mui-input-row.mui-left.allCheck label {
   font-size: 14px;
   line-height: 21px;
   padding-top: 2px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.mui-radio input[type="radio"]:checked:before {
+  content: "\e442";
 }
 
 .bottomWords {
