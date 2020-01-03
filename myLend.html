@@ -96,14 +96,6 @@
 		$(function () {
 			mui.init();
 
-			$('#search').click(function () {
-				if ($('.searchInput').val() == '') {
-					mui.toast('请输入搜索内容')
-				} else {
-					location.reload()
-				}
-			})
-
 			$('.continue').click(function () {
 				var that = $(this)
 				var btnArray = ['否', '是'];
