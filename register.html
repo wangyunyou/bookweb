@@ -46,7 +46,9 @@
 	<script type="text/javascript" charset="utf-8">
 		$(function () {
 			mui.init();
-
+			$("input").blur(function () {
+				$(this)[0].scrollIntoView(true);
+			})
 			$('.confirm').click(() => {
 				location.href = 'bind.html'
 			})
