@@ -107,6 +107,24 @@
 			$('.toBookshelf').click(() => {
 				location.href = 'bookshelf.html'
 			})
+
+			var addressList = []
+			$('.chooseAddress input').each(function () {
+				addressList.push($(this).is('[disabled]'))
+			})
+			if (isAllEqual(addressList) && addressList[0] == true) {
+				$('footer').hide()
+			}
+
+			function isAllEqual(array) {
+				if (array.length > 0) {
+					return !array.some(function (value, index) {
+						return value !== array[0];
+					});
+				} else {
+					return true;
+				}
+			}
 		})
 	</script>
 </body>
