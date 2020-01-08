@@ -12,16 +12,101 @@
 	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
 	<link href="css/mui.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="css/global.css" />
-	<link rel="stylesheet" type="text/css" href="css/help.css" />
 	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css" />
+	<style>
+		.mui-table-view-cell>a:not(.mui-btn) {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 4;
+			white-space: pre-wrap;
+			font-size: 13px;
+		}
+
+		.mui-table-view-cell {
+			padding: 15px;
+		}
+
+		.mui-table-view-cell.mui-collapse .mui-collapse-content {
+			padding: 14px 15px;
+			margin: 16px -15px -16px;
+		}
+
+		.tel {
+			height: 60px;
+			line-height: 60px;
+		}
+
+		.tel a {
+			display: block;
+			text-indent: 15px;
+		}
+	</style>
 </head>
 
 <body>
-	<header class="mui-bar mui-bar-nav">
-		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-		<h1 class="mui-title">帮助</h1>
-	</header>
-	<div style="height: 44px;"></div>
+	<div class="tel">
+		<a href="tel:400-1286009">客服电话：400-1286009</a>
+	</div>
+	<ul class=" mui-table-view">
+		<li class="mui-table-view-cell mui-collapse">
+			<a class="mui-navigate-right" href="#">1.Q:“不想用服务号借书了，押金可以退吗？”</a>
+			<div class="mui-collapse-content">
+				<p>A:“可以。如您因孩子升学等问题需要退押金，可先查看本书柜是否覆盖您孩子的学校，如覆盖可直接修改学校继续享受借书服务。
+					如您不再使用本服务号，可以点击【我的】页【退押金】按钮，即可退回198元押金。”</p>
+			</div>
+		</li>
+		<li class="mui-table-view-cell mui-collapse">
+			<a class="mui-navigate-right" href="#">2.Q:“借阅卡丢失了，怎么办？”</a>
+			<div class="mui-collapse-content">
+				<p>A:“您可以直接在【我的】页【重新绑卡】入口，输入领取到的新ic卡卡号，绑定新卡需支付30元卡费，请谨慎保管您的卡片。”</p>
+			</div>
+		</li>
+		<li class="mui-table-view-cell mui-collapse">
+			<a class="mui-navigate-right" href="#">3.Q:“一次能借几本书？”</a>
+			<div class="mui-collapse-content">
+				<p>A:“目前规定一次只能借一本哦。”</p>
+			</div>
+		</li>
+		<li class="mui-table-view-cell mui-collapse">
+			<a class="mui-navigate-right" href="#">4.Q:“可以更改学校吗？”</a>
+			<div class="mui-collapse-content">
+				<p>A:“可以。注册90天后您可在【我的】页点击【设置】，根据需要更改学校。”</p>
+			</div>
+		</li>
+		<li class="mui-table-view-cell mui-collapse">
+			<a class="mui-navigate-right" href="#">5.Q:“预约了一本图书，但是不想借了怎么办？”</a>
+			<div class="mui-collapse-content">
+				<p>A:“如您预约后24小时内未领取该书，系统默认将图书解除预约状态，您还可以在在【我的借阅】中点击【取消预约】按钮，即可取消预约。”</p>
+			</div>
+		</li>
+		<li class="mui-table-view-cell mui-collapse">
+			<a class="mui-navigate-right" href="#">6.Q:“为什么预约了一本书，在【我的借阅】找不到这本书了？”</a>
+			<div class="mui-collapse-content">
+				<p>A:“如您预约后24小时内未领取该书，系统默认将图书解除预约状态，或者您误操作了【取消预约】按钮。您可以在书城查询这本书重新借阅。”</p>
+			</div>
+		</li>
+		<li class="mui-table-view-cell mui-collapse">
+			<a class="mui-navigate-right" href="#">7.Q:“可以续借吗，续借的方法及规定有哪些？”</a>
+			<div class="mui-collapse-content">
+				<p>A:“可以。您可以点击【我的借阅】中的【续借】按钮，可在10天借阅期基础上再加10天。”</p>
+			</div>
+		</li>
+		<li class="mui-table-view-cell mui-collapse">
+			<a class="mui-navigate-right" href="#">8.Q:“图书借阅超时了怎么办？”</a>
+			<div class="mui-collapse-content">
+				<p>A:“图书逾期规定不得在柜体终端还书，且无法借取新的书籍直至归还逾期书籍；您可在【我的】页【书籍逾期】入口，联系责任老师或管理员还书。”</p>
+			</div>
+		</li>
+		<li class="mui-table-view-cell mui-collapse">
+			<a class="mui-navigate-right" href="#">9.Q:“图书丢失了怎么办？”</a>
+			<div class="mui-collapse-content">
+				<p>A:“规定图书丢失应根据图书详情页标明的定价进行原价补赔，您可以在【我的】页【书籍丢失】入口进行支付，支付成功后即可继续使用本服务号；如发现标注价格有误应及时与相关人员联系。”</p>
+			</div>
+		</li>
+		<li class="mui-table-view-cell mui-collapse" style="font-size: 13px;pointer-events:none;">
+			10.更多信息可在【我的消息】中，点击消息进入消息详情查看。
+		</li>
+	</ul>
 	<script type="text/javascript" charset="utf-8">
 		mui.init();
 	</script>
