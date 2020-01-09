@@ -160,16 +160,17 @@ footer {
 }
 
 .bookBox {
-  padding: 0 15px;
+  padding: 0 6px;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .bookThumbnail {
   width: 28%;
+  margin: 0 2.66%;
   overflow: hidden;
   margin-bottom: 10px;
 }
