@@ -103,6 +103,21 @@
 	</footer>
 	<script type="text/javascript" charset="utf-8">
 		$(function () {
+			window.onload = function () {
+				var url = window.location.href;
+				var ps = url.split("#");
+				console.log(ps)
+				try {
+					if (ps[1] != 1) {
+						url += "#1";
+					} else {
+						window.location = ps[0];
+					}
+				} catch (ex) {
+					url += "#1";
+				}
+				window.location.replace(url);
+			};
 			mui.init();
 			$('.toBookshelf').click(() => {
 				location.href = 'bookshelf.html'
